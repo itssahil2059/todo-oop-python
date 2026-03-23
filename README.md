@@ -27,5 +27,8 @@ Files
 - main.py
 - tasks.json
 
+
+Updated with JSON and error handling
+
 Author
 Sahil
