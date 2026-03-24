@@ -65,8 +65,11 @@ class TodoList:
                 task = Task(item["title"], item["completed"])
                 self.tasks.append(task)
 
-        except:
-            pass
+        except FileNotFoundError:
+            print("No saved tasks yet")
+
+        except json.JSONDecodeError:
+            print("File is empty or corrupted")
 
 
 if __name__ == "__main__":
@@ -92,8 +95,8 @@ if __name__ == "__main__":
             try:
                 index = int(input("Enter task number: "))
                 todo.complete_task(index)
-            except:
-                print("Invalid input")
+            except ValueError:
+                print("Please enter a valid number")
 
         elif choice == "4":
             print("Goodbye!")
