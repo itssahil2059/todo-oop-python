@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+import os
 import json
 
 
@@ -104,4 +106,3 @@ if __name__ == "__main__":
 
         else:
             print("Invalid choice")
-        
